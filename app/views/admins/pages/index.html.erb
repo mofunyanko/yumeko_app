@@ -1,0 +1,6 @@
+<h1>Adminsのページ</h1>
+<p>Find me in app/views/admins/pages/index.html.erb</p>
+<% if admin_signed_in? %>
+  <p>login now</p>
+  <%= link_to 'ログアウト', destroy_admin_session_path, method: :delete %>
+<% end %>

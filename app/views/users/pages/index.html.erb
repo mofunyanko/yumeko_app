@@ -1,0 +1,7 @@
+<h1>ユーザーのトップページ</h1>
+<p>Find me in app/views/users/pages/index.html.erb</p>
+
+<% if user_signed_in? %>
+  <p>login now</p>
+  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+<% end %>

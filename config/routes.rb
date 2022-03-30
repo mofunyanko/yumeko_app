@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  namespace :users do
+    get 'pages/index'
+  end
+  namespace :admins do
+    get 'pages/index'
+  end
   devise_scope:user do
     root to: 'users/sessions#create'
   end
