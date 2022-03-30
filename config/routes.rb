@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   devise_scope:user do
     root to: 'users/sessions#create'
   end
-  get 'pages/index'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     password: 'users/passwords',
