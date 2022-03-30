@@ -1,0 +1,2 @@
+module Users::PartsHelper
+end
