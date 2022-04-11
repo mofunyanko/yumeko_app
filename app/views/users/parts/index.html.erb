@@ -1,2 +1,23 @@
 <h1>商品一覧</h1>
 <p>Find me in app/views/users/parts/index.html.erb</p>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <table border="1">
+    <tr>
+      <th>商品名</th>
+      <th>単価</th>
+      <th>個数</th>
+    </tr>
+    <% @parts.each do |part| %>
+      <tr>
+        <td><%= part.name %></td>
+        <td><%= part.price %></td>
+        <td><%= part.quantity %></td>
+      </tr>
+    <% end %>
+  </table>
+</body>
