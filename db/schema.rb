@@ -48,6 +48,14 @@ ActiveRecord::Schema.define(version: 2022_03_30_091103) do
     t.string "name", default: "", null: false
     t.integer "price", default: 0, null: false
     t.integer "quantity", default: 1, null: false
+    t.bigint "parts_category_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["parts_category_id"], name: "index_parts_on_parts_category_id"
+  end
+
+  create_table "parts_categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name", default: "", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -65,4 +73,5 @@ ActiveRecord::Schema.define(version: 2022_03_30_091103) do
   end
 
   add_foreign_key "orders", "users"
+  add_foreign_key "parts", "parts_categories"
 end
