@@ -5,14 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 10.times.each do |t|
-  Part.where(name: "パーツ#{t}", price: t, quantity: 1).first_or_create
+  category = PartsCategory.where(name:"ねじ#{t}").first_or_create
+  Part.where(name: "パーツ#{t}", price: t, quantity: 1, parts_category_id: category.id).first_or_create
 end
 
 5.times.each do |t|
   User.create(email: "tester#{t}@example.com", password: "password", password_confirmation: "password")
 end
-
-PartsCategory.where(name:"ねじ").first_or_create
-PartsCategory.where(name:"ナット").first_or_create
-PartsCategory.where(name:"ボルト").first_or_create
