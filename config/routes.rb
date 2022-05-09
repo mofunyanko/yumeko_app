@@ -20,7 +20,9 @@ Rails.application.routes.draw do
     get 'partsshop/index'
 
     scope :partsshop do
-      resources :orders, only: [:index, :show, :new, :create]
+      resources :orders, only: [:index, :show, :new, :create] do
+        get "search", on: :collection
+      end
       resources :parts, only: [:index, :show] do
         get "search", on: :collection
       end

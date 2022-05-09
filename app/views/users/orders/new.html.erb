@@ -1,2 +1,44 @@
 <h1>購入</h1>
 <p>Find me in app/views/users/orders/new.html.erb</p>
+
+
+
+<%= form_with url:search_users_orders_path, method: :get do |f| %>
+  <%= f.collection_select(:category, @categories, :id, :name, prompt: '選択してください') %>
+  <%= f.submit '検索'%>
+<% end %>
+<%= form_with(model: @order, url: users_orders_path) do |f| %>
+  <fieldset>
+    <legend>支払い方法</legend>
+      <span>個人</span>
+      <%= f.radio_button :is_personal, true, value: true, :checked => true %><br/>
+      <span>プロジェクト</span>
+      <%= f.radio_button :is_personal, false, value: false %><br/>
+      <span>研究室</span>
+      <%= f.radio_button :is_personal, false, value: false %><br/>
+  </fieldset>
+
+  <br>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>商品名</th>
+        <th>単価[円]</th>
+        <th>購入単位[個(mm)]</th>
+        <th>購入個数[個]</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @parts.each do |part| %>
+        <tr>
+          <td><%= part.name %><%= f.hidden_field :part_id, name: "parts[#{part.id}][id]", value: part.id %></td>
+          <td><%= part.price %></td>
+          <td><%= part.quantity %></td>
+          <td><%= f.number_field :pu_qty, name: "parts[#{part.id}][pu_qty]", value: 0, min: 0 %></td>
+        </tr>
+      <% end %>
+    </tbody>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+  </table>
+  <%= f.submit value: "購入"%>
+<% end %>
