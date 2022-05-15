@@ -57,3 +57,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #ログイン認証用
 gem 'devise'
+
+#boostrap適用
+gem 'bootstrap-sass'
+
+#data-confirm-model適用
+gem 'data-confirm-modal'
+
+gem 'jquery-rails'

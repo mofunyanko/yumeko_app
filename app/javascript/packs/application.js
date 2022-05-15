@@ -11,3 +11,6 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+// = require bootstrap-sprockets
+// = require data-confirm-modal

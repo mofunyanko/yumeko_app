@@ -32,13 +32,13 @@
       <% @parts.each do |part| %>
         <tr>
           <td><%= part.name %><%= f.hidden_field :part_id, name: "parts[#{part.id}][id]", value: part.id %></td>
-          <td><%= part.price %></td>
-          <td><%= part.quantity %></td>
-          <td><%= f.number_field :pu_qty, name: "parts[#{part.id}][pu_qty]", value: 0, min: 0 %></td>
+          <td align="right"><%= part.price %></td>
+          <td align="right"><%= part.quantity %></td>
+          <td align="right"><%= f.number_field :pu_qty, name: "parts[#{part.id}][pu_qty]", value: 0, min: 0 %></td>
         </tr>
       <% end %>
     </tbody>
     <%= f.hidden_field :user_id, value: current_user.id %>
   </table>
-  <%= f.submit value: "購入", data: { confirm: '本当購入しますか？'} %>
+  <%= f.submit value: "購入", data: { confirm: "購入内容は以下でよろしいでしょうか？", cancel: "いいえ", commit: "購入する"}, title: "購入確認" %>
 <% end %>

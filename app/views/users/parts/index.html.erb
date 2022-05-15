@@ -17,8 +17,8 @@
   <% @parts.each do |part| %>
     <tr>
       <td><%= part.name %></td>
-      <td><%= part.price %></td>
-      <td><%= part.quantity %></td>
+      <td align="right"><%= part.price %></td>
+      <td align="right"><%= part.quantity %></td>
       <td><%= part.parts_category.name %></td>
     </tr>
   <% end %>

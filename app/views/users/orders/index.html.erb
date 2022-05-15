@@ -1,3 +1,28 @@
 <h1>購入履歴</h1>
 <p>Find me in app/views/users/orders/index.html.erb</p>
 
+<table border="1">
+  <thead>
+    <tr>
+      <th>商品名</th>
+      <th>単価[円]</th>
+      <th>購入単位[個(mm)]</th>
+      <th>購入個数[個]</th> 
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.part.name %></td>
+        <td align="right"><%= order.part.price %></td>
+        <td align="right"><%= order.part.quantity %></td>
+        <td align="right"><%= order.pu_qty %></td>
+      <tr>
+    <% end %>
+    <tr>
+      <td>合計</td>
+      <td align="right" colspan="3"><%= @price %></td>
+    </tr>
+  </tbody>
+</table>
+
