@@ -1,7 +1,4 @@
 <h1>購入</h1>
-<p>Find me in app/views/users/orders/new.html.erb</p>
-
-
 
 <%= form_with url:search_users_orders_path, method: :get do |f| %>
   <%= f.collection_select(:category, @categories, :id, :name, prompt: '選択してください') %>
