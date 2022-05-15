@@ -40,5 +40,5 @@
     </tbody>
     <%= f.hidden_field :user_id, value: current_user.id %>
   </table>
-  <%= f.submit value: "購入"%>
+  <%= f.submit value: "購入", data: { confirm: '本当購入しますか？'} %>
 <% end %>
