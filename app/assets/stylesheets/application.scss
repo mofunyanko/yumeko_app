@@ -17,3 +17,65 @@
 body {
   background-color: #fff8dc;
 }
+
+.wrapper {
+  margin: 0 auto 0 auto;
+}
+
+.logo {
+  margin: 10px 0 10px 0;
+  line-height: 0;
+  text-align: left;
+}
+
+h1{
+  color:#191970;
+  font-size: 35px;
+  font-family:"HG丸ｺﾞｼｯｸM-PRO";
+  border-bottom: 4px double #26499d;
+  margin: 20px 0 20px 0;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+table {
+  background-color: #f0f8ff;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  height: 300px;
+}
+
+th {
+  background-color: #b0c4de;
+}
+
+.search-box {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back-button {
+  font-size: 15pt;
+  text-decoration:none !important;
+  position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #000;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #ffb7db;
+    border-radius: 8px;
+    border-bottom: solid 5px #ff89c4;
+}
+
+.back-button:hover {
+  border-bottom: solid 2px #ff89c4;
+    transform: translateY(3px);
+}

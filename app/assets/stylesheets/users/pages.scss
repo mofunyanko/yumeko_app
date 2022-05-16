@@ -1,3 +1,43 @@
 // Place all the styles related to the Users::Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.pages-box {
+  background-color: #fddea5;
+  padding: 140px;
+  display: flex;
+  flex-direction:row-reverse;
+}
+
+.pages-item {
+  font-size: 20pt;
+  text-decoration:none !important;
+  position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 240px;
+    width: 33%;
+    padding: 25px 50px;
+    color: #000;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #6bb6ff;
+    border-radius: 8px;
+    border-bottom: solid 5px #1d7fde;
+}
+
+.pages-item:hover {
+  border-bottom: solid 2px #1d7fde;
+    transform: translateY(3px);
+}
+
+.pages-item:nth-child(1) {
+  background-color:  #ffb7db;
+  border-bottom: solid 5px #ff89c4;
+}
+
+.pages-item:nth-child(2) {
+  background-color:  #7fbfff;
+}

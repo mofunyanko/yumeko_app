@@ -2,7 +2,7 @@ class Users::OrdersController < ApplicationController
   def index
     @parts = Part.includes(:parts_category).all
     @categories = PartsCategory.all
-    @orders = Order.all
+    @orders = Order.where(user_id: current_user.id)
     @price = 0
     @orders.each do |od|
       @price += od.part.price * od.pu_qty 
