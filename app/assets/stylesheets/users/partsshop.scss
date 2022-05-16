@@ -1,3 +1,48 @@
 // Place all the styles related to the Users::Partsshop controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.partsshop-box {
+  background-color: #f5f5f5;
+  padding: 150px;
+  display: flex;
+}
+
+.partsshop-item {
+  font-size: 20pt;
+  text-decoration:none !important;
+  position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 25px 50px;
+    color: #000;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #6bb6ff;
+    border-radius: 8px;
+    border-bottom: solid 5px #1d7fde;
+}
+
+.partsshop-item:hover {
+  border-bottom: solid 2px #1d7fde;
+    transform: translateY(3px);
+}
+
+.partsshop-item:nth-child(1) {
+  background-color:  #7fbfff;
+}
+
+.partsshop-item:nth-child(2) {
+  background-color:  #7fbfff;
+}
+
+.partsshop-item:nth-child(3) {
+  background-color:  #7fbfff;
+}
+
+.partsshop-item:nth-child(4) {
+  background-color:  #ffb7db;
+}

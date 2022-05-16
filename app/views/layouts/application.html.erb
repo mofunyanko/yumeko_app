@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <div class="logo">
+      <%= link_to users_pages_index_path do %>
+        <%= image_tag '/images/logo.png' %>
+      <% end %>
+    </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
