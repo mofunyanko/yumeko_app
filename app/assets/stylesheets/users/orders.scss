@@ -5,8 +5,7 @@
 fieldset {
   font-size: 18px;
   background-color: #f0f8ff;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 15px auto;
   width: 200px;
   height: 120px;
   border: 4px #26499d double; padding:0 8px 8px;
@@ -16,8 +15,31 @@ legend {
   font-size: 20px;
   background-color: #b0c4de;
   color: #000;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding: 3px 6px;
   border: 1px #26499d solid;
+}
+
+.submit {
+  font-size: 15pt;
+  text-decoration:none !important;
+  position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 240px;
+    width: fit-content; margin: 20px auto;
+    padding: 10px 25px;
+    color: #000;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #6bb6ff;
+    border-radius: 8px;
+    border-bottom: solid 5px #1d7fde;
+}
+
+.submit:hover {
+  border-bottom: solid 2px #1d7fde;
+    transform: translateY(3px);
 }

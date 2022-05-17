@@ -1,9 +1,12 @@
 <h1>購入</h1>
 
 <%= form_with url:search_users_orders_path, method: :get do |f| %>
-  <%= f.collection_select(:category, @categories, :id, :name, prompt: '選択してください') %>
-  <%= f.submit '検索'%>
+  <div style= "width: fit-content; margin: 20px auto;">
+    <%= f.collection_select(:category, @categories, :id, :name, prompt: '選択してください') %>
+    <%= f.submit '検索'%>
+  </div>
 <% end %>
+
 <%= form_with(model: @order, url: users_orders_path) do |f| %>
   <fieldset>
     <legend>支払い方法</legend>
@@ -15,7 +18,6 @@
       <%= f.radio_button :is_personal, false, value: false %><br/>
   </fieldset>
 
-  <br>
   <table border="1">
     <thead>
       <tr>
@@ -37,7 +39,7 @@
     </tbody>
     <%= f.hidden_field :user_id, value: current_user.id %>
   </table>
-  <%= f.submit value: "購入", data: { confirm: "購入内容は以下でよろしいでしょうか？", cancel: "いいえ", commit: "購入する"}, title: "購入確認" %>
+  <%= f.submit :class=>"submit", value: "購入", data: { confirm: "購入は以下の内容でよろしいでしょうか？", cancel: "いいえ", commit: "購入する"}, title: "購入確認" %>
 <% end %>
 
 <%= link_to '戻る', users_pages_index_path, class: "back-button" %>
