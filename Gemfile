@@ -65,3 +65,6 @@ gem 'bootstrap-sass'
 gem 'data-confirm-modal'
 
 gem 'jquery-rails'
+
+# 日本語化
+gem 'devise-i18n'
