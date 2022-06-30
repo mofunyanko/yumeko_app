@@ -68,3 +68,5 @@ gem 'jquery-rails'
 
 # 日本語化
 gem 'devise-i18n'
+
+gem 'dotenv-rails'
